@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51235C421ACAF4B400CD7AFF /* JVSMotionSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 51235C411ACAF4B400CD7AFF /* JVSMotionSensor.m */; };
+		51235C451ACB38A000CD7AFF /* MotionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51235C441ACB38A000CD7AFF /* MotionViewController.m */; };
 		515D9AA31ABB5B1300A3126F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 515D9AA21ABB5B1300A3126F /* main.m */; };
 		515D9AA61ABB5B1300A3126F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 515D9AA51ABB5B1300A3126F /* AppDelegate.m */; };
-		515D9AA91ABB5B1300A3126F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 515D9AA81ABB5B1300A3126F /* ViewController.m */; };
+		515D9AA91ABB5B1300A3126F /* JVSRemoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 515D9AA81ABB5B1300A3126F /* JVSRemoteViewController.m */; };
 		515D9AAC1ABB5B1300A3126F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 515D9AAA1ABB5B1300A3126F /* Main.storyboard */; };
 		515D9AAE1ABB5B1300A3126F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 515D9AAD1ABB5B1300A3126F /* Images.xcassets */; };
 		515D9AB11ABB5B1300A3126F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 515D9AAF1ABB5B1300A3126F /* LaunchScreen.xib */; };
 		515D9ABD1ABB5B1300A3126F /* JarvisTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 515D9ABC1ABB5B1300A3126F /* JarvisTests.m */; };
+		515D9AD11ABC86DC00A3126F /* JVSMultipeerClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 515D9AD01ABC86DC00A3126F /* JVSMultipeerClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,19 +30,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		51235C401ACAF4B400CD7AFF /* JVSMotionSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JVSMotionSensor.h; sourceTree = "<group>"; };
+		51235C411ACAF4B400CD7AFF /* JVSMotionSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JVSMotionSensor.m; sourceTree = "<group>"; };
+		51235C431ACB38A000CD7AFF /* MotionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MotionViewController.h; sourceTree = "<group>"; };
+		51235C441ACB38A000CD7AFF /* MotionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MotionViewController.m; sourceTree = "<group>"; };
 		515D9A9D1ABB5B1300A3126F /* Jarvis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jarvis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		515D9AA11ABB5B1300A3126F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		515D9AA21ABB5B1300A3126F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		515D9AA41ABB5B1300A3126F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		515D9AA51ABB5B1300A3126F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		515D9AA71ABB5B1300A3126F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		515D9AA81ABB5B1300A3126F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		515D9AA71ABB5B1300A3126F /* JVSRemoteViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JVSRemoteViewController.h; sourceTree = "<group>"; };
+		515D9AA81ABB5B1300A3126F /* JVSRemoteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JVSRemoteViewController.m; sourceTree = "<group>"; };
 		515D9AAB1ABB5B1300A3126F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		515D9AAD1ABB5B1300A3126F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		515D9AB01ABB5B1300A3126F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		515D9AB61ABB5B1300A3126F /* JarvisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JarvisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		515D9ABB1ABB5B1300A3126F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		515D9ABC1ABB5B1300A3126F /* JarvisTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JarvisTests.m; sourceTree = "<group>"; };
+		515D9ACF1ABC86DC00A3126F /* JVSMultipeerClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JVSMultipeerClient.h; sourceTree = "<group>"; };
+		515D9AD01ABC86DC00A3126F /* JVSMultipeerClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JVSMultipeerClient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +92,14 @@
 			children = (
 				515D9AA41ABB5B1300A3126F /* AppDelegate.h */,
 				515D9AA51ABB5B1300A3126F /* AppDelegate.m */,
-				515D9AA71ABB5B1300A3126F /* ViewController.h */,
-				515D9AA81ABB5B1300A3126F /* ViewController.m */,
+				51235C431ACB38A000CD7AFF /* MotionViewController.h */,
+				51235C441ACB38A000CD7AFF /* MotionViewController.m */,
+				515D9AA71ABB5B1300A3126F /* JVSRemoteViewController.h */,
+				515D9AA81ABB5B1300A3126F /* JVSRemoteViewController.m */,
+				515D9ACF1ABC86DC00A3126F /* JVSMultipeerClient.h */,
+				515D9AD01ABC86DC00A3126F /* JVSMultipeerClient.m */,
+				51235C401ACAF4B400CD7AFF /* JVSMotionSensor.h */,
+				51235C411ACAF4B400CD7AFF /* JVSMotionSensor.m */,
 				515D9AAA1ABB5B1300A3126F /* Main.storyboard */,
 				515D9AAD1ABB5B1300A3126F /* Images.xcassets */,
 				515D9AAF1ABB5B1300A3126F /* LaunchScreen.xib */,
@@ -168,6 +183,7 @@
 				TargetAttributes = {
 					515D9A9C1ABB5B1300A3126F = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = TZPBQT6RZA;
 					};
 					515D9AB51ABB5B1300A3126F = {
 						CreatedOnToolsVersion = 6.2;
@@ -219,8 +235,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				515D9AA91ABB5B1300A3126F /* ViewController.m in Sources */,
+				515D9AA91ABB5B1300A3126F /* JVSRemoteViewController.m in Sources */,
+				51235C421ACAF4B400CD7AFF /* JVSMotionSensor.m in Sources */,
+				51235C451ACB38A000CD7AFF /* MotionViewController.m in Sources */,
 				515D9AA61ABB5B1300A3126F /* AppDelegate.m in Sources */,
+				515D9AD11ABC86DC00A3126F /* JVSMultipeerClient.m in Sources */,
 				515D9AA31ABB5B1300A3126F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,6 +364,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Framework",
+				);
 				INFOPLIST_FILE = Jarvis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -355,6 +379,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Framework",
+				);
 				INFOPLIST_FILE = Jarvis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -414,6 +443,7 @@
 				515D9AC21ABB5B1300A3126F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		515D9AC31ABB5B1300A3126F /* Build configuration list for PBXNativeTarget "JarvisTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +452,7 @@
 				515D9AC51ABB5B1300A3126F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
