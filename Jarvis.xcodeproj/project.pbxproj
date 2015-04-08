@@ -20,7 +20,7 @@
 		516EDB0B1ACC5AA70094ADEE /* SLKMotionCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 516EDB0A1ACC5AA70094ADEE /* SLKMotionCircleView.m */; };
 		516EDB131ACC67EF0094ADEE /* UIColor+Slick.m in Sources */ = {isa = PBXBuildFile; fileRef = 516EDB121ACC67EF0094ADEE /* UIColor+Slick.m */; };
 		51EEBD0F1ACC6A6800F9B980 /* SLKRemoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EEBD0E1ACC6A6800F9B980 /* SLKRemoteViewController.m */; };
-		51F07D441AD4D63600124E02 /* SLKDeviceMotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F07D431AD4D63600124E02 /* SLKDeviceMotion.m */; };
+		51F07D471AD5E18200124E02 /* SLKDeviceMotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F07D461AD5E18200124E02 /* SLKDeviceMotion.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,8 +59,8 @@
 		516EDB121ACC67EF0094ADEE /* UIColor+Slick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Slick.m"; sourceTree = "<group>"; };
 		51EEBD0D1ACC6A6800F9B980 /* SLKRemoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKRemoteViewController.h; sourceTree = "<group>"; };
 		51EEBD0E1ACC6A6800F9B980 /* SLKRemoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKRemoteViewController.m; sourceTree = "<group>"; };
-		51F07D421AD4D63600124E02 /* SLKDeviceMotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLKDeviceMotion.h; path = ../SLKDeviceMotion.h; sourceTree = "<group>"; };
-		51F07D431AD4D63600124E02 /* SLKDeviceMotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLKDeviceMotion.m; path = ../SLKDeviceMotion.m; sourceTree = "<group>"; };
+		51F07D451AD5E18200124E02 /* SLKDeviceMotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKDeviceMotion.h; sourceTree = "<group>"; };
+		51F07D461AD5E18200124E02 /* SLKDeviceMotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKDeviceMotion.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,8 +149,8 @@
 				515D9AD01ABC86DC00A3126F /* SLKMultipeerClient.m */,
 				51235C401ACAF4B400CD7AFF /* SLKMotionSensor.h */,
 				51235C411ACAF4B400CD7AFF /* SLKMotionSensor.m */,
-				51F07D421AD4D63600124E02 /* SLKDeviceMotion.h */,
-				51F07D431AD4D63600124E02 /* SLKDeviceMotion.m */,
+				51F07D451AD5E18200124E02 /* SLKDeviceMotion.h */,
+				51F07D461AD5E18200124E02 /* SLKDeviceMotion.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -287,10 +287,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51F07D471AD5E18200124E02 /* SLKDeviceMotion.m in Sources */,
 				516EDB0B1ACC5AA70094ADEE /* SLKMotionCircleView.m in Sources */,
 				516EDB131ACC67EF0094ADEE /* UIColor+Slick.m in Sources */,
 				516EDB081ACC52240094ADEE /* SLKConstants.m in Sources */,
-				51F07D441AD4D63600124E02 /* SLKDeviceMotion.m in Sources */,
 				51235C421ACAF4B400CD7AFF /* SLKMotionSensor.m in Sources */,
 				51235C451ACB38A000CD7AFF /* SLKMotionViewController.m in Sources */,
 				515D9AA61ABB5B1300A3126F /* AppDelegate.m in Sources */,
