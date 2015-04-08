@@ -9,26 +9,19 @@
 #import <Foundation/Foundation.h>
 #import <MultipeerConnectivity/MultipeerConnectivity.h>
 
-FOUNDATION_EXPORT NSString *const JVSNextMessage;
-FOUNDATION_EXPORT NSString *const JVSBackMessage;
-FOUNDATION_EXPORT NSString *const JVSESCMessage;
-FOUNDATION_EXPORT NSString *const JVSMuteMessage;
-FOUNDATION_EXPORT NSString *const JVSUnmuteMessage;
-
 @protocol MultipeerDelegate
-
+/// For delegate to make view changes.
 - (void)stateChanged:(MCSessionState)state peer:(MCPeerID *)peer;
 
 @end
 
-@interface JVSMultipeerClient : NSObject
+@interface SLKMultipeerClient : NSObject
 
+@property (nonatomic) MCSessionState currentState;
 @property id<MultipeerDelegate> delegate;
-
-//- (void)startBrowsing;
-//- (void)stopBrowsing;
-
+/// Singleton.
 + (instancetype)sharedInstance;
+/// Sends the message string as payload.
 - (void)sendMessage:(NSString *)message;
 
 @end

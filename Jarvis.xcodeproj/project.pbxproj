@@ -7,16 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		51235C421ACAF4B400CD7AFF /* JVSMotionSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 51235C411ACAF4B400CD7AFF /* JVSMotionSensor.m */; };
-		51235C451ACB38A000CD7AFF /* MotionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51235C441ACB38A000CD7AFF /* MotionViewController.m */; };
+		51235C421ACAF4B400CD7AFF /* SLKMotionSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 51235C411ACAF4B400CD7AFF /* SLKMotionSensor.m */; };
+		51235C451ACB38A000CD7AFF /* SLKMotionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51235C441ACB38A000CD7AFF /* SLKMotionViewController.m */; };
 		515D9AA31ABB5B1300A3126F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 515D9AA21ABB5B1300A3126F /* main.m */; };
 		515D9AA61ABB5B1300A3126F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 515D9AA51ABB5B1300A3126F /* AppDelegate.m */; };
-		515D9AA91ABB5B1300A3126F /* JVSRemoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 515D9AA81ABB5B1300A3126F /* JVSRemoteViewController.m */; };
 		515D9AAC1ABB5B1300A3126F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 515D9AAA1ABB5B1300A3126F /* Main.storyboard */; };
 		515D9AAE1ABB5B1300A3126F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 515D9AAD1ABB5B1300A3126F /* Images.xcassets */; };
 		515D9AB11ABB5B1300A3126F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 515D9AAF1ABB5B1300A3126F /* LaunchScreen.xib */; };
 		515D9ABD1ABB5B1300A3126F /* JarvisTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 515D9ABC1ABB5B1300A3126F /* JarvisTests.m */; };
-		515D9AD11ABC86DC00A3126F /* JVSMultipeerClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 515D9AD01ABC86DC00A3126F /* JVSMultipeerClient.m */; };
+		515D9AD11ABC86DC00A3126F /* SLKMultipeerClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 515D9AD01ABC86DC00A3126F /* SLKMultipeerClient.m */; };
+		516EDB081ACC52240094ADEE /* SLKConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 516EDB071ACC52240094ADEE /* SLKConstants.m */; };
+		516EDB0B1ACC5AA70094ADEE /* SLKMotionCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 516EDB0A1ACC5AA70094ADEE /* SLKMotionCircleView.m */; };
+		516EDB131ACC67EF0094ADEE /* UIColor+Slick.m in Sources */ = {isa = PBXBuildFile; fileRef = 516EDB121ACC67EF0094ADEE /* UIColor+Slick.m */; };
+		51EEBD0F1ACC6A6800F9B980 /* SLKRemoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EEBD0E1ACC6A6800F9B980 /* SLKRemoteViewController.m */; };
+		51F07D441AD4D63600124E02 /* SLKDeviceMotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F07D431AD4D63600124E02 /* SLKDeviceMotion.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,25 +34,33 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		51235C401ACAF4B400CD7AFF /* JVSMotionSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JVSMotionSensor.h; sourceTree = "<group>"; };
-		51235C411ACAF4B400CD7AFF /* JVSMotionSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JVSMotionSensor.m; sourceTree = "<group>"; };
-		51235C431ACB38A000CD7AFF /* MotionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MotionViewController.h; sourceTree = "<group>"; };
-		51235C441ACB38A000CD7AFF /* MotionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MotionViewController.m; sourceTree = "<group>"; };
-		515D9A9D1ABB5B1300A3126F /* Jarvis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jarvis.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		51235C401ACAF4B400CD7AFF /* SLKMotionSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKMotionSensor.h; sourceTree = "<group>"; };
+		51235C411ACAF4B400CD7AFF /* SLKMotionSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKMotionSensor.m; sourceTree = "<group>"; };
+		51235C431ACB38A000CD7AFF /* SLKMotionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKMotionViewController.h; sourceTree = "<group>"; };
+		51235C441ACB38A000CD7AFF /* SLKMotionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 5; lastKnownFileType = sourcecode.c.objc; path = SLKMotionViewController.m; sourceTree = "<group>"; };
+		515D9A9D1ABB5B1300A3126F /* Slick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Slick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		515D9AA11ABB5B1300A3126F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		515D9AA21ABB5B1300A3126F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		515D9AA41ABB5B1300A3126F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		515D9AA51ABB5B1300A3126F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		515D9AA71ABB5B1300A3126F /* JVSRemoteViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JVSRemoteViewController.h; sourceTree = "<group>"; };
-		515D9AA81ABB5B1300A3126F /* JVSRemoteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JVSRemoteViewController.m; sourceTree = "<group>"; };
 		515D9AAB1ABB5B1300A3126F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		515D9AAD1ABB5B1300A3126F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		515D9AB01ABB5B1300A3126F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		515D9AB61ABB5B1300A3126F /* JarvisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JarvisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		515D9ABB1ABB5B1300A3126F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		515D9ABC1ABB5B1300A3126F /* JarvisTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JarvisTests.m; sourceTree = "<group>"; };
-		515D9ACF1ABC86DC00A3126F /* JVSMultipeerClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JVSMultipeerClient.h; sourceTree = "<group>"; };
-		515D9AD01ABC86DC00A3126F /* JVSMultipeerClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JVSMultipeerClient.m; sourceTree = "<group>"; };
+		515D9ACF1ABC86DC00A3126F /* SLKMultipeerClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKMultipeerClient.h; sourceTree = "<group>"; };
+		515D9AD01ABC86DC00A3126F /* SLKMultipeerClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKMultipeerClient.m; sourceTree = "<group>"; };
+		516EDB061ACC52240094ADEE /* SLKConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKConstants.h; sourceTree = "<group>"; };
+		516EDB071ACC52240094ADEE /* SLKConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKConstants.m; sourceTree = "<group>"; };
+		516EDB091ACC5AA70094ADEE /* SLKMotionCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKMotionCircleView.h; sourceTree = "<group>"; };
+		516EDB0A1ACC5AA70094ADEE /* SLKMotionCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKMotionCircleView.m; sourceTree = "<group>"; };
+		516EDB111ACC67EF0094ADEE /* UIColor+Slick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Slick.h"; sourceTree = "<group>"; };
+		516EDB121ACC67EF0094ADEE /* UIColor+Slick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Slick.m"; sourceTree = "<group>"; };
+		51EEBD0D1ACC6A6800F9B980 /* SLKRemoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKRemoteViewController.h; sourceTree = "<group>"; };
+		51EEBD0E1ACC6A6800F9B980 /* SLKRemoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKRemoteViewController.m; sourceTree = "<group>"; };
+		51F07D421AD4D63600124E02 /* SLKDeviceMotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLKDeviceMotion.h; path = ../SLKDeviceMotion.h; sourceTree = "<group>"; };
+		51F07D431AD4D63600124E02 /* SLKDeviceMotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLKDeviceMotion.m; path = ../SLKDeviceMotion.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +93,7 @@
 		515D9A9E1ABB5B1300A3126F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				515D9A9D1ABB5B1300A3126F /* Jarvis.app */,
+				515D9A9D1ABB5B1300A3126F /* Slick.app */,
 				515D9AB61ABB5B1300A3126F /* JarvisTests.xctest */,
 			);
 			name = Products;
@@ -92,14 +104,10 @@
 			children = (
 				515D9AA41ABB5B1300A3126F /* AppDelegate.h */,
 				515D9AA51ABB5B1300A3126F /* AppDelegate.m */,
-				51235C431ACB38A000CD7AFF /* MotionViewController.h */,
-				51235C441ACB38A000CD7AFF /* MotionViewController.m */,
-				515D9AA71ABB5B1300A3126F /* JVSRemoteViewController.h */,
-				515D9AA81ABB5B1300A3126F /* JVSRemoteViewController.m */,
-				515D9ACF1ABC86DC00A3126F /* JVSMultipeerClient.h */,
-				515D9AD01ABC86DC00A3126F /* JVSMultipeerClient.m */,
-				51235C401ACAF4B400CD7AFF /* JVSMotionSensor.h */,
-				51235C411ACAF4B400CD7AFF /* JVSMotionSensor.m */,
+				516EDB0D1ACC5AC00094ADEE /* ViewControllers */,
+				516EDAFC1ACC4BA80094ADEE /* Model */,
+				51EEBD101ACC6AA000F9B980 /* Helpers */,
+				516EDB0C1ACC5AB60094ADEE /* Views */,
 				515D9AAA1ABB5B1300A3126F /* Main.storyboard */,
 				515D9AAD1ABB5B1300A3126F /* Images.xcassets */,
 				515D9AAF1ABB5B1300A3126F /* LaunchScreen.xib */,
@@ -134,6 +142,50 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		516EDAFC1ACC4BA80094ADEE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				515D9ACF1ABC86DC00A3126F /* SLKMultipeerClient.h */,
+				515D9AD01ABC86DC00A3126F /* SLKMultipeerClient.m */,
+				51235C401ACAF4B400CD7AFF /* SLKMotionSensor.h */,
+				51235C411ACAF4B400CD7AFF /* SLKMotionSensor.m */,
+				51F07D421AD4D63600124E02 /* SLKDeviceMotion.h */,
+				51F07D431AD4D63600124E02 /* SLKDeviceMotion.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		516EDB0C1ACC5AB60094ADEE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				516EDB091ACC5AA70094ADEE /* SLKMotionCircleView.h */,
+				516EDB0A1ACC5AA70094ADEE /* SLKMotionCircleView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		516EDB0D1ACC5AC00094ADEE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				51235C431ACB38A000CD7AFF /* SLKMotionViewController.h */,
+				51235C441ACB38A000CD7AFF /* SLKMotionViewController.m */,
+				51EEBD0D1ACC6A6800F9B980 /* SLKRemoteViewController.h */,
+				51EEBD0E1ACC6A6800F9B980 /* SLKRemoteViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		51EEBD101ACC6AA000F9B980 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				516EDB061ACC52240094ADEE /* SLKConstants.h */,
+				516EDB071ACC52240094ADEE /* SLKConstants.m */,
+				516EDB111ACC67EF0094ADEE /* UIColor+Slick.h */,
+				516EDB121ACC67EF0094ADEE /* UIColor+Slick.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,7 +203,7 @@
 			);
 			name = Jarvis;
 			productName = Jarvis;
-			productReference = 515D9A9D1ABB5B1300A3126F /* Jarvis.app */;
+			productReference = 515D9A9D1ABB5B1300A3126F /* Slick.app */;
 			productType = "com.apple.product-type.application";
 		};
 		515D9AB51ABB5B1300A3126F /* JarvisTests */ = {
@@ -183,7 +235,7 @@
 				TargetAttributes = {
 					515D9A9C1ABB5B1300A3126F = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = TZPBQT6RZA;
+						DevelopmentTeam = EG77NM7886;
 					};
 					515D9AB51ABB5B1300A3126F = {
 						CreatedOnToolsVersion = 6.2;
@@ -235,11 +287,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				515D9AA91ABB5B1300A3126F /* JVSRemoteViewController.m in Sources */,
-				51235C421ACAF4B400CD7AFF /* JVSMotionSensor.m in Sources */,
-				51235C451ACB38A000CD7AFF /* MotionViewController.m in Sources */,
+				516EDB0B1ACC5AA70094ADEE /* SLKMotionCircleView.m in Sources */,
+				516EDB131ACC67EF0094ADEE /* UIColor+Slick.m in Sources */,
+				516EDB081ACC52240094ADEE /* SLKConstants.m in Sources */,
+				51F07D441AD4D63600124E02 /* SLKDeviceMotion.m in Sources */,
+				51235C421ACAF4B400CD7AFF /* SLKMotionSensor.m in Sources */,
+				51235C451ACB38A000CD7AFF /* SLKMotionViewController.m in Sources */,
 				515D9AA61ABB5B1300A3126F /* AppDelegate.m in Sources */,
-				515D9AD11ABC86DC00A3126F /* JVSMultipeerClient.m in Sources */,
+				51EEBD0F1ACC6A6800F9B980 /* SLKRemoteViewController.m in Sources */,
+				515D9AD11ABC86DC00A3126F /* SLKMultipeerClient.m in Sources */,
 				515D9AA31ABB5B1300A3126F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,8 +426,9 @@
 					"$(PROJECT_DIR)/Framework",
 				);
 				INFOPLIST_FILE = Jarvis/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Slick;
 			};
 			name = Debug;
 		};
@@ -385,8 +442,9 @@
 					"$(PROJECT_DIR)/Framework",
 				);
 				INFOPLIST_FILE = Jarvis/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Slick;
 			};
 			name = Release;
 		};
@@ -405,7 +463,7 @@
 				INFOPLIST_FILE = JarvisTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Jarvis.app/Jarvis";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Slick.app/Slick";
 			};
 			name = Debug;
 		};
@@ -420,7 +478,7 @@
 				INFOPLIST_FILE = JarvisTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Jarvis.app/Jarvis";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Slick.app/Slick";
 			};
 			name = Release;
 		};

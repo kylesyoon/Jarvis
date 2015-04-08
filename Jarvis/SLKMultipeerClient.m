@@ -6,16 +6,11 @@
 //  Copyright (c) 2015 Kyle Yoon. All rights reserved.
 //
 
-#import "JVSMultipeerClient.h"
+#import "SLKMultipeerClient.h"
 
 static NSString *const JARVISServiceType = @"jarvis-service";
-NSString *const JVSNextMessage = @"NEXT";
-NSString *const JVSBackMessage = @"BACK";
-NSString *const JVSESCMessage = @"ESC";
-NSString *const JVSMuteMessage = @"MUTE";
-NSString *const JVSUnmuteMessage = @"UNMUTE";
 
-@interface JVSMultipeerClient() <MCNearbyServiceBrowserDelegate, MCSessionDelegate>
+@interface SLKMultipeerClient() <MCNearbyServiceBrowserDelegate, MCSessionDelegate>
 
 @property (strong, nonatomic) MCPeerID *localPeerID;
 @property (strong, nonatomic) MCNearbyServiceBrowser *browser;
@@ -24,7 +19,7 @@ NSString *const JVSUnmuteMessage = @"UNMUTE";
 
 @end
 
-@implementation JVSMultipeerClient
+@implementation SLKMultipeerClient
 
 + (instancetype)sharedInstance
 {
@@ -42,23 +37,16 @@ NSString *const JVSUnmuteMessage = @"UNMUTE";
     self = [super init];
     
     self.localPeerID = [[MCPeerID alloc] initWithDisplayName:[[UIDevice currentDevice] name]];
+    self.currentState = MCSessionStateNotConnected;
     
     if (!self.browser) {
         self.browser = [[MCNearbyServiceBrowser alloc] initWithPeer:self.localPeerID serviceType:JARVISServiceType];
     }
-
     self.browser.delegate = self;
     [self.browser startBrowsingForPeers];
-    NSLog(@"BROWSER INITIALIZED: %@", self.browser);
+    NSLog(@"Started up browsing with display name %@", self.browser.myPeerID);
     return self;
 }
-
-//- (void)stopBrowsing
-//{
-//    self.browser.delegate = nil;
-//    [self.browser stopBrowsingForPeers];
-//    NSLog(@"Stopped browsing");
-//}
 
 #pragma mark - Message sending
 
@@ -83,7 +71,7 @@ NSString *const JVSUnmuteMessage = @"UNMUTE";
         self.session = [[MCSession alloc] initWithPeer:self.localPeerID];
         self.session.delegate = self;
     }
-    NSLog(@"MCNearbyServiceBrowser - FOUND PEER: %@", peerID);
+    NSLog(@"MCNearbyServiceBrowser - Found peer: %@", peerID);
     self.peers = [NSArray arrayWithObject:peerID];
     
     [browser invitePeer:peerID toSession:self.session withContext:nil timeout:30];
@@ -92,24 +80,27 @@ NSString *const JVSUnmuteMessage = @"UNMUTE";
 - (void)browser:(MCNearbyServiceBrowser *)browser lostPeer:(MCPeerID *)peerID
 {
     NSLog(@"Lost peer: %@", peerID);
+    [browser invitePeer:peerID toSession:self.session withContext:nil timeout:30];
 }
 
 #pragma mark - MCSessionDelegate
 
 - (void)session:(MCSession *)session peer:(MCPeerID *)peerID didChangeState:(MCSessionState)state
 {
-    // Is there a way to override the state setter instead.
-    [self.delegate stateChanged:state peer:peerID];
-
+    // MCSession has its own thread that takes its time. Make these changes now!
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.delegate stateChanged:state peer:peerID];
+        self.currentState = state;
+    });
     switch (state) {
         case MCSessionStateNotConnected:
-            NSLog(@"MCSessionDelegate: NOT CONNECTED: %@", peerID);
+            NSLog(@"MCSessionDelegate: Not connected.");
             break;
         case MCSessionStateConnecting:
-            NSLog(@"MCSessionDelegate: CONNECTING, %@", peerID);
+            NSLog(@"MCSessionDelegate: Connecting to %@", peerID);
             break;
         default:
-            NSLog(@"MCSessionDelegate: CONNECTED, %@", peerID);
+            NSLog(@"MCSessionDelegate: Connected to %@", peerID);
             // Maybe alert to show that it started.
             break;
     }
