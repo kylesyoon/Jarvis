@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SLKConstants.h"
+#import "JARConstants.h"
 
 @protocol MotionSensorDelegate
 
@@ -19,7 +19,7 @@
 
 @end
 
-@interface SLKMotionSensor : NSObject
+@interface JARMotionController : NSObject
 
 @property id<MotionSensorDelegate> delegate;
 /// Singleton.

@@ -7,20 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		51235C421ACAF4B400CD7AFF /* SLKMotionSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 51235C411ACAF4B400CD7AFF /* SLKMotionSensor.m */; };
-		51235C451ACB38A000CD7AFF /* SLKMotionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51235C441ACB38A000CD7AFF /* SLKMotionViewController.m */; };
+		51235C421ACAF4B400CD7AFF /* JARMotionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51235C411ACAF4B400CD7AFF /* JARMotionController.m */; };
+		51235C451ACB38A000CD7AFF /* JARMotionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51235C441ACB38A000CD7AFF /* JARMotionViewController.m */; };
 		515D9AA31ABB5B1300A3126F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 515D9AA21ABB5B1300A3126F /* main.m */; };
 		515D9AA61ABB5B1300A3126F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 515D9AA51ABB5B1300A3126F /* AppDelegate.m */; };
 		515D9AAC1ABB5B1300A3126F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 515D9AAA1ABB5B1300A3126F /* Main.storyboard */; };
 		515D9AAE1ABB5B1300A3126F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 515D9AAD1ABB5B1300A3126F /* Images.xcassets */; };
 		515D9AB11ABB5B1300A3126F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 515D9AAF1ABB5B1300A3126F /* LaunchScreen.xib */; };
 		515D9ABD1ABB5B1300A3126F /* JarvisTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 515D9ABC1ABB5B1300A3126F /* JarvisTests.m */; };
-		515D9AD11ABC86DC00A3126F /* SLKMultipeerClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 515D9AD01ABC86DC00A3126F /* SLKMultipeerClient.m */; };
-		516EDB081ACC52240094ADEE /* SLKConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 516EDB071ACC52240094ADEE /* SLKConstants.m */; };
+		515D9AD11ABC86DC00A3126F /* JARMultipeerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 515D9AD01ABC86DC00A3126F /* JARMultipeerController.m */; };
+		516EDB081ACC52240094ADEE /* JARConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 516EDB071ACC52240094ADEE /* JARConstants.m */; };
 		516EDB0B1ACC5AA70094ADEE /* SLKMotionCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 516EDB0A1ACC5AA70094ADEE /* SLKMotionCircleView.m */; };
-		516EDB131ACC67EF0094ADEE /* UIColor+Slick.m in Sources */ = {isa = PBXBuildFile; fileRef = 516EDB121ACC67EF0094ADEE /* UIColor+Slick.m */; };
-		51EEBD0F1ACC6A6800F9B980 /* SLKRemoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EEBD0E1ACC6A6800F9B980 /* SLKRemoteViewController.m */; };
-		51F07D471AD5E18200124E02 /* SLKDeviceMotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F07D461AD5E18200124E02 /* SLKDeviceMotion.m */; };
+		516EDB131ACC67EF0094ADEE /* UIColor+Jarvis.m in Sources */ = {isa = PBXBuildFile; fileRef = 516EDB121ACC67EF0094ADEE /* UIColor+Jarvis.m */; };
+		51B35B1F1AD6BDF2007DFF48 /* JARMotionConditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B35B1E1AD6BDF2007DFF48 /* JARMotionConditions.m */; };
+		51EEBD0F1ACC6A6800F9B980 /* JARRemoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EEBD0E1ACC6A6800F9B980 /* JARRemoteViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,11 +34,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		51235C401ACAF4B400CD7AFF /* SLKMotionSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKMotionSensor.h; sourceTree = "<group>"; };
-		51235C411ACAF4B400CD7AFF /* SLKMotionSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKMotionSensor.m; sourceTree = "<group>"; };
-		51235C431ACB38A000CD7AFF /* SLKMotionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKMotionViewController.h; sourceTree = "<group>"; };
-		51235C441ACB38A000CD7AFF /* SLKMotionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 5; lastKnownFileType = sourcecode.c.objc; path = SLKMotionViewController.m; sourceTree = "<group>"; };
-		515D9A9D1ABB5B1300A3126F /* Slick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Slick.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		51235C401ACAF4B400CD7AFF /* JARMotionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JARMotionController.h; sourceTree = "<group>"; };
+		51235C411ACAF4B400CD7AFF /* JARMotionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JARMotionController.m; sourceTree = "<group>"; };
+		51235C431ACB38A000CD7AFF /* JARMotionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JARMotionViewController.h; sourceTree = "<group>"; };
+		51235C441ACB38A000CD7AFF /* JARMotionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 5; lastKnownFileType = sourcecode.c.objc; path = JARMotionViewController.m; sourceTree = "<group>"; };
+		515D9A9D1ABB5B1300A3126F /* Jarvis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jarvis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		515D9AA11ABB5B1300A3126F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		515D9AA21ABB5B1300A3126F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		515D9AA41ABB5B1300A3126F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -49,18 +49,18 @@
 		515D9AB61ABB5B1300A3126F /* JarvisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JarvisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		515D9ABB1ABB5B1300A3126F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		515D9ABC1ABB5B1300A3126F /* JarvisTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JarvisTests.m; sourceTree = "<group>"; };
-		515D9ACF1ABC86DC00A3126F /* SLKMultipeerClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKMultipeerClient.h; sourceTree = "<group>"; };
-		515D9AD01ABC86DC00A3126F /* SLKMultipeerClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKMultipeerClient.m; sourceTree = "<group>"; };
-		516EDB061ACC52240094ADEE /* SLKConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKConstants.h; sourceTree = "<group>"; };
-		516EDB071ACC52240094ADEE /* SLKConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKConstants.m; sourceTree = "<group>"; };
+		515D9ACF1ABC86DC00A3126F /* JARMultipeerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JARMultipeerController.h; sourceTree = "<group>"; };
+		515D9AD01ABC86DC00A3126F /* JARMultipeerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JARMultipeerController.m; sourceTree = "<group>"; };
+		516EDB061ACC52240094ADEE /* JARConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JARConstants.h; sourceTree = "<group>"; };
+		516EDB071ACC52240094ADEE /* JARConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JARConstants.m; sourceTree = "<group>"; };
 		516EDB091ACC5AA70094ADEE /* SLKMotionCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKMotionCircleView.h; sourceTree = "<group>"; };
 		516EDB0A1ACC5AA70094ADEE /* SLKMotionCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKMotionCircleView.m; sourceTree = "<group>"; };
-		516EDB111ACC67EF0094ADEE /* UIColor+Slick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Slick.h"; sourceTree = "<group>"; };
-		516EDB121ACC67EF0094ADEE /* UIColor+Slick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Slick.m"; sourceTree = "<group>"; };
-		51EEBD0D1ACC6A6800F9B980 /* SLKRemoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKRemoteViewController.h; sourceTree = "<group>"; };
-		51EEBD0E1ACC6A6800F9B980 /* SLKRemoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKRemoteViewController.m; sourceTree = "<group>"; };
-		51F07D451AD5E18200124E02 /* SLKDeviceMotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKDeviceMotion.h; sourceTree = "<group>"; };
-		51F07D461AD5E18200124E02 /* SLKDeviceMotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKDeviceMotion.m; sourceTree = "<group>"; };
+		516EDB111ACC67EF0094ADEE /* UIColor+Jarvis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Jarvis.h"; sourceTree = "<group>"; };
+		516EDB121ACC67EF0094ADEE /* UIColor+Jarvis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Jarvis.m"; sourceTree = "<group>"; };
+		51B35B1D1AD6BDF2007DFF48 /* JARMotionConditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JARMotionConditions.h; sourceTree = "<group>"; };
+		51B35B1E1AD6BDF2007DFF48 /* JARMotionConditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JARMotionConditions.m; sourceTree = "<group>"; };
+		51EEBD0D1ACC6A6800F9B980 /* JARRemoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JARRemoteViewController.h; sourceTree = "<group>"; };
+		51EEBD0E1ACC6A6800F9B980 /* JARRemoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JARRemoteViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +93,7 @@
 		515D9A9E1ABB5B1300A3126F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				515D9A9D1ABB5B1300A3126F /* Slick.app */,
+				515D9A9D1ABB5B1300A3126F /* Jarvis.app */,
 				515D9AB61ABB5B1300A3126F /* JarvisTests.xctest */,
 			);
 			name = Products;
@@ -105,9 +105,9 @@
 				515D9AA41ABB5B1300A3126F /* AppDelegate.h */,
 				515D9AA51ABB5B1300A3126F /* AppDelegate.m */,
 				516EDB0D1ACC5AC00094ADEE /* ViewControllers */,
-				516EDAFC1ACC4BA80094ADEE /* Model */,
-				51EEBD101ACC6AA000F9B980 /* Helpers */,
 				516EDB0C1ACC5AB60094ADEE /* Views */,
+				51D8472F1AD84EEE003244E7 /* ModelControllers */,
+				51EEBD101ACC6AA000F9B980 /* Helpers */,
 				515D9AAA1ABB5B1300A3126F /* Main.storyboard */,
 				515D9AAD1ABB5B1300A3126F /* Images.xcassets */,
 				515D9AAF1ABB5B1300A3126F /* LaunchScreen.xib */,
@@ -142,19 +142,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		516EDAFC1ACC4BA80094ADEE /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				515D9ACF1ABC86DC00A3126F /* SLKMultipeerClient.h */,
-				515D9AD01ABC86DC00A3126F /* SLKMultipeerClient.m */,
-				51235C401ACAF4B400CD7AFF /* SLKMotionSensor.h */,
-				51235C411ACAF4B400CD7AFF /* SLKMotionSensor.m */,
-				51F07D451AD5E18200124E02 /* SLKDeviceMotion.h */,
-				51F07D461AD5E18200124E02 /* SLKDeviceMotion.m */,
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
 		516EDB0C1ACC5AB60094ADEE /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,21 +154,34 @@
 		516EDB0D1ACC5AC00094ADEE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				51235C431ACB38A000CD7AFF /* SLKMotionViewController.h */,
-				51235C441ACB38A000CD7AFF /* SLKMotionViewController.m */,
-				51EEBD0D1ACC6A6800F9B980 /* SLKRemoteViewController.h */,
-				51EEBD0E1ACC6A6800F9B980 /* SLKRemoteViewController.m */,
+				51235C431ACB38A000CD7AFF /* JARMotionViewController.h */,
+				51235C441ACB38A000CD7AFF /* JARMotionViewController.m */,
+				51EEBD0D1ACC6A6800F9B980 /* JARRemoteViewController.h */,
+				51EEBD0E1ACC6A6800F9B980 /* JARRemoteViewController.m */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		51D8472F1AD84EEE003244E7 /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+				515D9ACF1ABC86DC00A3126F /* JARMultipeerController.h */,
+				515D9AD01ABC86DC00A3126F /* JARMultipeerController.m */,
+				51235C401ACAF4B400CD7AFF /* JARMotionController.h */,
+				51235C411ACAF4B400CD7AFF /* JARMotionController.m */,
+			);
+			name = ModelControllers;
 			sourceTree = "<group>";
 		};
 		51EEBD101ACC6AA000F9B980 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				516EDB061ACC52240094ADEE /* SLKConstants.h */,
-				516EDB071ACC52240094ADEE /* SLKConstants.m */,
-				516EDB111ACC67EF0094ADEE /* UIColor+Slick.h */,
-				516EDB121ACC67EF0094ADEE /* UIColor+Slick.m */,
+				516EDB061ACC52240094ADEE /* JARConstants.h */,
+				516EDB071ACC52240094ADEE /* JARConstants.m */,
+				51B35B1D1AD6BDF2007DFF48 /* JARMotionConditions.h */,
+				51B35B1E1AD6BDF2007DFF48 /* JARMotionConditions.m */,
+				516EDB111ACC67EF0094ADEE /* UIColor+Jarvis.h */,
+				516EDB121ACC67EF0094ADEE /* UIColor+Jarvis.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -203,7 +203,7 @@
 			);
 			name = Jarvis;
 			productName = Jarvis;
-			productReference = 515D9A9D1ABB5B1300A3126F /* Slick.app */;
+			productReference = 515D9A9D1ABB5B1300A3126F /* Jarvis.app */;
 			productType = "com.apple.product-type.application";
 		};
 		515D9AB51ABB5B1300A3126F /* JarvisTests */ = {
@@ -287,15 +287,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51F07D471AD5E18200124E02 /* SLKDeviceMotion.m in Sources */,
 				516EDB0B1ACC5AA70094ADEE /* SLKMotionCircleView.m in Sources */,
-				516EDB131ACC67EF0094ADEE /* UIColor+Slick.m in Sources */,
-				516EDB081ACC52240094ADEE /* SLKConstants.m in Sources */,
-				51235C421ACAF4B400CD7AFF /* SLKMotionSensor.m in Sources */,
-				51235C451ACB38A000CD7AFF /* SLKMotionViewController.m in Sources */,
+				516EDB131ACC67EF0094ADEE /* UIColor+Jarvis.m in Sources */,
+				516EDB081ACC52240094ADEE /* JARConstants.m in Sources */,
+				51B35B1F1AD6BDF2007DFF48 /* JARMotionConditions.m in Sources */,
+				51235C421ACAF4B400CD7AFF /* JARMotionController.m in Sources */,
+				51235C451ACB38A000CD7AFF /* JARMotionViewController.m in Sources */,
 				515D9AA61ABB5B1300A3126F /* AppDelegate.m in Sources */,
-				51EEBD0F1ACC6A6800F9B980 /* SLKRemoteViewController.m in Sources */,
-				515D9AD11ABC86DC00A3126F /* SLKMultipeerClient.m in Sources */,
+				51EEBD0F1ACC6A6800F9B980 /* JARRemoteViewController.m in Sources */,
+				515D9AD11ABC86DC00A3126F /* JARMultipeerController.m in Sources */,
 				515D9AA31ABB5B1300A3126F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,14 +421,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Framework",
-				);
 				INFOPLIST_FILE = Jarvis/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = Slick;
+				PRODUCT_NAME = Jarvis;
 			};
 			name = Debug;
 		};
@@ -437,14 +433,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Framework",
-				);
 				INFOPLIST_FILE = Jarvis/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = Slick;
+				PRODUCT_NAME = Jarvis;
 			};
 			name = Release;
 		};

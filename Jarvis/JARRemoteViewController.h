@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SLKRemoteViewController : UIViewController
+@interface JARRemoteViewController : UIViewController
 
 @end
 

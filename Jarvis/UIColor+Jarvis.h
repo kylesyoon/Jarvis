@@ -1,5 +1,5 @@
 //
-//  UIColor+Motion.h
+//  UIColor+Jarvis.h
 //  Jarvis
 //
 //  Created by Kyle Yoon on 4/1/15.
@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIColor (Slick)
+@interface UIColor (Jarvis)
 
-+ (UIColor *)slick_primaryRed;
-+ (UIColor *)slick_primaryBlue;
++ (UIColor *)jarvis_primaryRed;
++ (UIColor *)jarvis_primaryBlue;
 
 @end

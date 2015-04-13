@@ -6,17 +6,22 @@
 //  Copyright (c) 2015 Kyle Yoon. All rights reserved.
 //
 
-#import "SLKConstants.h"
+#import "JARConstants.h"
 
 const struct MessagePayload MessagePayload = {
     .next = @"NEXT",
+    .strongNext = @"STRONGNEXT",
     .back = @"BACK",
+    .present = @"PRESENT",
     .esc = @"ESC",
     .mute = @"MUTE",
     .unmute = @"UNMUTE",
-    .present = @"PRESENT",
+    .restart = @"RESTART",
 };
 
-@implementation SLKConstants
+const CGFloat ninetyDegrees = 90.0;
+const CGFloat thirtyDegrees = 30.0;
+
+@implementation JARConstants
 
 @end

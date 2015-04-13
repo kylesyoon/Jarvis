@@ -6,11 +6,11 @@
 //  Copyright (c) 2015 Kyle Yoon. All rights reserved.
 //
 
-#import "SLKMultipeerClient.h"
+#import "JARMultipeerController.h"
 
 static NSString *const JARVISServiceType = @"jarvis-service";
 
-@interface SLKMultipeerClient() <MCNearbyServiceBrowserDelegate, MCSessionDelegate>
+@interface JARMultipeerController() <MCNearbyServiceBrowserDelegate, MCSessionDelegate>
 
 @property (strong, nonatomic) MCPeerID *localPeerID;
 @property (strong, nonatomic) MCNearbyServiceBrowser *browser;
@@ -19,7 +19,7 @@ static NSString *const JARVISServiceType = @"jarvis-service";
 
 @end
 
-@implementation SLKMultipeerClient
+@implementation JARMultipeerController
 
 + (instancetype)sharedInstance
 {
@@ -36,16 +36,37 @@ static NSString *const JARVISServiceType = @"jarvis-service";
 {
     self = [super init];
     
-    self.localPeerID = [[MCPeerID alloc] initWithDisplayName:[[UIDevice currentDevice] name]];
-    self.currentState = MCSessionStateNotConnected;
+    if (self) {
+        self.currentState = MCSessionStateNotConnected;
+        [self startBrowsing];
+    }
     
+    return self;
+}
+
+- (void)startBrowsing
+{
+    self.localPeerID = [[MCPeerID alloc] initWithDisplayName:[[UIDevice currentDevice] name]];
+
     if (!self.browser) {
         self.browser = [[MCNearbyServiceBrowser alloc] initWithPeer:self.localPeerID serviceType:JARVISServiceType];
+        self.browser.delegate = self;
     }
-    self.browser.delegate = self;
     [self.browser startBrowsingForPeers];
     NSLog(@"Started up browsing with display name %@", self.browser.myPeerID);
-    return self;
+}
+
+- (void)stopBrowsing
+{
+    [self.browser stopBrowsingForPeers];
+    self.browser = nil;
+    self.session = nil;
+}
+
+- (void)restartBrowsing
+{
+    [self stopBrowsing];
+    [self startBrowsing];
 }
 
 #pragma mark - Message sending
@@ -80,7 +101,7 @@ static NSString *const JARVISServiceType = @"jarvis-service";
 - (void)browser:(MCNearbyServiceBrowser *)browser lostPeer:(MCPeerID *)peerID
 {
     NSLog(@"Lost peer: %@", peerID);
-    [browser invitePeer:peerID toSession:self.session withContext:nil timeout:30];
+//    [browser invitePeer:peerID toSession:self.session withContext:nil timeout:30];
 }
 
 #pragma mark - MCSessionDelegate
@@ -91,19 +112,8 @@ static NSString *const JARVISServiceType = @"jarvis-service";
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.delegate stateChanged:state peer:peerID];
         self.currentState = state;
+        self.currentPeer = peerID;
     });
-    switch (state) {
-        case MCSessionStateNotConnected:
-            NSLog(@"MCSessionDelegate: Not connected.");
-            break;
-        case MCSessionStateConnecting:
-            NSLog(@"MCSessionDelegate: Connecting to %@", peerID);
-            break;
-        default:
-            NSLog(@"MCSessionDelegate: Connected to %@", peerID);
-            // Maybe alert to show that it started.
-            break;
-    }
 }
 
 // Boiler plate stuff

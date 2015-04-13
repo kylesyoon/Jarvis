@@ -15,13 +15,17 @@
 
 @end
 
-@interface SLKMultipeerClient : NSObject
+@interface JARMultipeerController : NSObject
 
-@property (nonatomic) MCSessionState currentState;
-@property id<MultipeerDelegate> delegate;
 /// Singleton.
 + (instancetype)sharedInstance;
 /// Sends the message string as payload.
 - (void)sendMessage:(NSString *)message;
+- (void)restartBrowsing;
+
+@property (nonatomic) MCSessionState currentState;
+@property (nonatomic) MCPeerID *currentPeer;
+@property id<MultipeerDelegate> delegate;
+
 
 @end

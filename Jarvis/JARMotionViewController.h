@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SLKMotionViewController : UIViewController
+@interface JARMotionViewController : UIViewController
 
 @end

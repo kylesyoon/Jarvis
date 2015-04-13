@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 Kyle Yoon. All rights reserved.
 //
 
-#import "SLKRemoteViewController.h"
-#import "SLKMultipeerClient.h"
-#import "SLKMotionSensor.h"
-#import "SLKConstants.h"
-#import "UIColor+Slick.h"
+#import "JARRemoteViewController.h"
+#import "JARMultipeerController.h"
+#import "JARMotionController.h"
+#import "JARConstants.h"
+#import "UIColor+Jarvis.h"
 
-@interface SLKRemoteViewController () <MultipeerDelegate, MotionSensorDelegate>
+@interface JARRemoteViewController () <MultipeerDelegate, MotionSensorDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 @property (weak, nonatomic) IBOutlet UIButton *dismissButton;
@@ -21,47 +21,45 @@
 @property (weak, nonatomic) IBOutlet UIButton *rightArrowButton;
 @property (weak, nonatomic) IBOutlet UIButton *escButton;
 @property (weak, nonatomic) IBOutlet UIButton *presentButton;
+@property (weak, nonatomic) IBOutlet UIButton *refreshButton;
 
-@property (strong, nonatomic) SLKMultipeerClient *multipeerClient;
-@property (strong, nonatomic) SLKMotionSensor *motionSensor;
+@property (strong, nonatomic) JARMultipeerController *multipeerClient;
+@property (strong, nonatomic) JARMotionController *motionSensor;
+@property (strong, nonatomic) MCPeerID *peer;
 
 @end
 
-@implementation SLKRemoteViewController
+@implementation JARRemoteViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.multipeerClient = [SLKMultipeerClient sharedInstance];
+    self.multipeerClient = [JARMultipeerController sharedInstance];
     self.multipeerClient.delegate = self;
-    
-    self.motionSensor = [SLKMotionSensor sharedInstance];
-    self.motionSensor.delegate = self;
-    [self.motionSensor startGettingDeviceMotion];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     
-    [self changeViewForState:self.multipeerClient.currentState];
+    [self changeViewForState:self.multipeerClient.currentState peer:self.multipeerClient.currentPeer];
 }
 
-- (void)changeViewForState:(MCSessionState)state
+- (void)changeViewForState:(MCSessionState)state peer:(MCPeerID *)peer
 {
     UIColor *color = [[UIColor alloc] init];
     switch (state) {
         case MCSessionStateConnecting:
-            self.statusLabel.text = @"Connecting";
+            self.statusLabel.text = [NSString stringWithFormat:@"Connecting to %@", peer.displayName];
             color = nil;
             break;
         case MCSessionStateNotConnected:
             self.statusLabel.text = @"Not Connected";
-            color = [UIColor slick_primaryRed];
+            color = [UIColor jarvis_primaryRed];
             break;
         default:
-            self.statusLabel.text = @"Connected";
-            color = [UIColor slick_primaryBlue];
+            self.statusLabel.text = [NSString stringWithFormat:@"Connected to %@", peer.displayName];
+            color = [UIColor jarvis_primaryBlue];
             break;
     }
     if (color) {
@@ -72,6 +70,7 @@
         [self.dismissButton setTitleColor:color forState:UIControlStateNormal];
         [self.leftArrowButton setTitleColor:color forState:UIControlStateNormal];
         [self.rightArrowButton setTitleColor:color forState:UIControlStateNormal];
+        [self.refreshButton setTitleColor:color forState:UIControlStateNormal];
     }
 }
 
@@ -79,7 +78,7 @@
 
 - (void)stateChanged:(MCSessionState)state peer:(MCPeerID *)peer
 {
-    [self changeViewForState:state];
+    [self changeViewForState:state peer:peer];
 }
 
 #pragma mark - SLKMotionSensor Delegate
@@ -92,6 +91,7 @@
         [self.multipeerClient sendMessage:MessagePayload.unmute];
     }
 }
+
 #pragma mark - IBActions
 
 - (IBAction)tappedLeftButton:(UIButton *)leftButton
@@ -114,9 +114,16 @@
     [self.multipeerClient sendMessage:MessagePayload.present];
 }
 
+- (IBAction)pressedRefresh:(id)sender
+{
+    [self.multipeerClient sendMessage:MessagePayload.restart];
+    [self.multipeerClient restartBrowsing];
+}
+
 - (IBAction)pressedDismissRemote:(id)sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
 
 @end

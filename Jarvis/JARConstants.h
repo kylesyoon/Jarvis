@@ -10,13 +10,19 @@
 
 FOUNDATION_EXPORT const struct MessagePayload {
     __unsafe_unretained NSString *next;
+    __unsafe_unretained NSString *strongNext;
     __unsafe_unretained NSString *back;
+    __unsafe_unretained NSString *present;
     __unsafe_unretained NSString *esc;
     __unsafe_unretained NSString *mute;
     __unsafe_unretained NSString *unmute;
-    __unsafe_unretained NSString *present;
+    __unsafe_unretained NSString *restart;
 } MessagePayload;
 
-@interface SLKConstants : NSObject
+FOUNDATION_EXPORT const CGFloat ninetyDegrees;
+FOUNDATION_EXPORT const CGFloat thirtyDegrees;
+FOUNDATION_EXPORT const CGFloat motionTriggerDelay;
+
+@interface JARConstants : NSObject
 
 @end
