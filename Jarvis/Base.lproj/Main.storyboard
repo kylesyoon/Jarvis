@@ -29,12 +29,6 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" id="lns-9k-BnT"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not Connected" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ud-7n-QFm">
-                                <rect key="frame" x="16" y="566" width="106" height="19"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
-                                <color key="textColor" red="0.72941176470588232" green="0.89411764705882357" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle2" translatesAutoresizingMaskIntoConstraints="NO" id="vLX-LM-9D8">
                                 <rect key="frame" x="175" y="175" width="250" height="250"/>
                                 <constraints>
@@ -42,13 +36,18 @@
                                     <constraint firstAttribute="width" constant="250" id="QlA-SQ-pk2"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not Connected" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ud-7n-QFm">
+                                <rect key="frame" x="247" y="290" width="106" height="19"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" red="0.72941176470588232" green="0.89411764705882357" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.14901960784313725" green="0.15686274509803921" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="jC1-9r-hKH" firstAttribute="centerY" secondItem="8ud-7n-QFm" secondAttribute="centerY" id="5JL-EO-PXb"/>
-                            <constraint firstItem="jC1-9r-hKH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8ud-7n-QFm" secondAttribute="trailing" constant="8" id="609-iP-xXd"/>
+                            <constraint firstAttribute="centerY" secondItem="8ud-7n-QFm" secondAttribute="centerY" id="5fX-Jj-8BM"/>
+                            <constraint firstAttribute="centerX" secondItem="8ud-7n-QFm" secondAttribute="centerX" id="CFe-Gi-CZL"/>
                             <constraint firstAttribute="centerY" secondItem="vLX-LM-9D8" secondAttribute="centerY" id="HcD-x0-06P"/>
-                            <constraint firstItem="8ud-7n-QFm" firstAttribute="leading" secondItem="jzU-I5-tHG" secondAttribute="leadingMargin" id="LbH-Hv-Jdp"/>
                             <constraint firstItem="jC1-9r-hKH" firstAttribute="leading" secondItem="jzU-I5-tHG" secondAttribute="leadingMargin" id="SXq-YI-5vj"/>
                             <constraint firstItem="jC1-9r-hKH" firstAttribute="trailing" secondItem="jzU-I5-tHG" secondAttribute="trailingMargin" id="W68-Io-By6"/>
                             <constraint firstItem="jC1-9r-hKH" firstAttribute="top" secondItem="KCU-sH-U35" secondAttribute="bottom" id="Zhd-pd-3XR"/>
@@ -64,6 +63,7 @@
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
+                        <outlet property="circleImage" destination="vLX-LM-9D8" id="ZJ6-H3-Ysn"/>
                         <outlet property="deviceLabel" destination="8ud-7n-QFm" id="pMJ-LW-MUr"/>
                         <outlet property="remoteButton" destination="jC1-9r-hKH" id="q4J-7b-x6k"/>
                     </connections>

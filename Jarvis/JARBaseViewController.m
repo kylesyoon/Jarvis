@@ -1,6 +1,6 @@
 //
 //  JARBaseViewController.m
-//  
+//
 //
 //  Created by Kyle Yoon on 4/13/15.
 //
@@ -29,16 +29,16 @@
      UIAlertAction *connectAction = [UIAlertAction actionWithTitle:@"Connect"
                                                              style:UIAlertActionStyleDefault
                                                            handler:^(UIAlertAction *action) {
-          [self.multipeerController.browser invitePeer:peer
-                                             toSession:session
-                                           withContext:nil
-                                               timeout:30];
-     }];
+                                                                [self.multipeerController.browser invitePeer:peer
+                                                                                                   toSession:session
+                                                                                                 withContext:nil
+                                                                                                     timeout:30];
+                                                           }];
      UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel"
                                                             style:UIAlertActionStyleCancel
                                                           handler:^(UIAlertAction *action) {
-          [foundPeerAlert dismissViewControllerAnimated:YES completion:nil];
-     }];
+                                                               [foundPeerAlert dismissViewControllerAnimated:YES completion:nil];
+                                                          }];
      [foundPeerAlert addAction:connectAction];
      [foundPeerAlert addAction:cancelAction];
      [self presentViewController:foundPeerAlert animated:YES completion:nil];

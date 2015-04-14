@@ -17,7 +17,7 @@
     CGContextRef contextRef = UIGraphicsGetCurrentContext();
     CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
 
-    CGFloat locations[4] = { 0.0, 0.6, 0.95, 1.0 };
+    CGFloat locations[4] = { 0.0, 0.6, 0.75, 1.0 };
     CFArrayRef colorArray = (__bridge CFArrayRef)@[
                                                    (id)[UIColor whiteColor].CGColor,
                                                    (id)[UIColor whiteColor].CGColor,

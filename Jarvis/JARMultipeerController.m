@@ -72,15 +72,18 @@ static NSString *const JARVISServiceType = @"jarvis-service";
 
 - (void)sendMessage:(NSString *)message
 {
-    NSLog(@"Sending message %@ to peer %@", message, self.peers);
+    NSLog(@"Sending message %@ to peer %@", message, self.currentPeer);
     
     NSData *payload = [message dataUsingEncoding:NSUTF8StringEncoding];
     NSError *error = nil;
-    
+    // Sending data to current peer.
     [self.session sendData:payload
-                   toPeers:self.peers
+                   toPeers:@[self.currentPeer]
                   withMode:MCSessionSendDataReliable
                      error:&error];
+    if (error) {
+        NSLog(@"ERROR: %@", error);
+    }
 }
 
 #pragma mark - MCNearbyServiceBrowserDelegate

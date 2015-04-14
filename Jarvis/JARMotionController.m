@@ -45,26 +45,9 @@ static const CGFloat JARMotionTriggerDelay = 0.5;
         if (!self.motionManager) {
             self.motionManager = [[CMMotionManager alloc] init];
         }
-        // Enabling muting by covering sensor.
-        [UIDevice currentDevice].proximityMonitoringEnabled = YES;
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(sensorStateChanged:) name:@"UIDeviceProximityStateDidChangeNotification"
-                                                   object:nil];
     }
     
     return self;
-}
-
-#pragma mark - NSNotification
-
-- (void)sensorStateChanged:(NSNotification *)notification
-{
-    [self.delegate changedToProximityState:[[UIDevice currentDevice] proximityState]];
-}
-
-- (void)dealloc
-{
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - Device Motion

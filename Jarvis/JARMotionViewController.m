@@ -12,11 +12,13 @@
 #import "JARConstants.h"
 #import "JARConnectedGradientView.h"
 #import "JARMotionGradientView.h"
+#import "UIColor+Jarvis.h"
 
 @interface JARMotionViewController () <MultipeerControllerDelegate, MotionControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *remoteButton;
 @property (weak, nonatomic) IBOutlet UILabel *deviceLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *circleImage;
 @property (strong, nonatomic) JARConnectedGradientView *connectedGradient;
 @property (strong, nonatomic) JARMotionGradientView *motionGradient;
 
@@ -34,7 +36,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
      [super viewWillAppear:animated];
-
+     
      [self.motionController startGettingDeviceMotion];
      
      if (self.multipeerController.currentPeer) {
@@ -82,14 +84,18 @@
      switch (state) {
           case MCSessionStateConnecting:
                self.deviceLabel.text = @"Connecting";
+               self.deviceLabel.textColor = [UIColor jarvis_lightBlue];
                break;
           case MCSessionStateNotConnected:
                self.deviceLabel.text = @"Not Connected";
+               self.deviceLabel.textColor = [UIColor jarvis_lightBlue];
                [self hideConnectedGradient];
                break;
           case MCSessionStateConnected:
                self.deviceLabel.text = peer.displayName;
+               self.deviceLabel.textColor = [UIColor jarvis_gunMetal];
                [self showConnectedGradient];
+               [self setUpProximitySensor];
                break;
      }
 }
@@ -102,35 +108,61 @@
                            delay:0.0
                          options:UIViewAnimationOptionCurveEaseOut
                       animations:^{
-          self.connectedGradient.alpha = 1.0;
-     } completion:nil];
+                           self.connectedGradient.alpha = 1.0;
+                      } completion:nil];
 }
 
 - (void)hideConnectedGradient
 {
-     [UIView animateWithDuration:0.5
+     [UIView animateWithDuration:0.25
                            delay:0.0
                          options:UIViewAnimationOptionCurveEaseOut
                       animations:^{
-          self.connectedGradient.alpha = 0.0;
-     } completion:nil];
+                           self.connectedGradient.alpha = 0.0;
+                      } completion:nil];
 }
 
 - (void)showMotionGradient
 {
-     [UIView animateWithDuration:0.5 
+     [UIView animateWithDuration:0.25
                            delay:0.0
                          options:UIViewAnimationOptionCurveEaseOut
                       animations:^{
-          self.motionGradient.alpha = 1.0;
-     } completion:^(BOOL finished) {
-          [UIView animateWithDuration:0.5
-                                delay:0.0
-                              options:UIViewAnimationOptionCurveEaseIn
-                           animations:^{
-               self.motionGradient.alpha = 0.0;
-          } completion:nil];
-     }];
+                           self.motionGradient.alpha = 1.0;
+                      } completion:^(BOOL finished) {
+                           [UIView animateWithDuration:0.5
+                                                 delay:0.0
+                                               options:UIViewAnimationOptionCurveEaseIn
+                                            animations:^{
+                                                 self.motionGradient.alpha = 0.0;
+                                            } completion:nil];
+                      }];
+}
+
+#pragma mark - UIDevice Proximity Sensor
+
+- (void)setUpProximitySensor
+{
+     // Enabling muting by covering sensor.
+     [UIDevice currentDevice].proximityMonitoringEnabled = YES;
+     [[NSNotificationCenter defaultCenter] addObserver:self
+                                              selector:@selector(sensorStateChanged:)
+                                                  name:@"UIDeviceProximityStateDidChangeNotification"
+                                                object:nil];
+}
+
+- (void)sensorStateChanged:(NSNotification *)notification
+{
+     if ([[UIDevice currentDevice] proximityState]) {
+          [self.multipeerController sendMessage:MessagePayload.mute];
+     } else {
+          [self.multipeerController sendMessage:MessagePayload.unmute];
+     }
+}
+
+- (void)dealloc
+{
+     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end
