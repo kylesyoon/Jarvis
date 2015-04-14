@@ -10,7 +10,7 @@
 
 @interface UIColor (Jarvis)
 
-+ (UIColor *)jarvis_primaryRed;
-+ (UIColor *)jarvis_primaryBlue;
++ (UIColor *)jarvis_lightBlue;
++ (UIColor *)jarvis_gunMetal;
 
 @end

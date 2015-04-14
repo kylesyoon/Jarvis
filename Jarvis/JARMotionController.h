@@ -7,24 +7,25 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "JARConstants.h"
 
-@protocol MotionSensorDelegate
+@protocol MotionControllerDelegate
 
 @required
+/// Delegate method for the proximity sensor. Will fire on state change.
 - (void)changedToProximityState:(BOOL)state;
-
 @optional
+/// Delegate method for motion detection. Will fire on detecting specified motions.
 - (void)detectedMotion:(NSString *)motion;
 
 @end
 
 @interface JARMotionController : NSObject
 
-@property id<MotionSensorDelegate> delegate;
+@property id<MotionControllerDelegate> delegate;
 /// Singleton.
 + (instancetype)sharedInstance;
 /// Starts pushing device motion updates.
 - (void)startGettingDeviceMotion;
+- (void)stopGettingDeviceMotion;
 
 @end

@@ -13,7 +13,6 @@ static NSString *const JARVISServiceType = @"jarvis-service";
 @interface JARMultipeerController() <MCNearbyServiceBrowserDelegate, MCSessionDelegate>
 
 @property (strong, nonatomic) MCPeerID *localPeerID;
-@property (strong, nonatomic) MCNearbyServiceBrowser *browser;
 @property (strong, nonatomic) MCSession *session;
 @property (strong, nonatomic) NSArray *peers;
 
@@ -93,15 +92,12 @@ static NSString *const JARVISServiceType = @"jarvis-service";
         self.session.delegate = self;
     }
     NSLog(@"MCNearbyServiceBrowser - Found peer: %@", peerID);
-    self.peers = [NSArray arrayWithObject:peerID];
-    
-    [browser invitePeer:peerID toSession:self.session withContext:nil timeout:30];
+    [self.delegate foundPeer:peerID forSession:self.session];
 }
 
 - (void)browser:(MCNearbyServiceBrowser *)browser lostPeer:(MCPeerID *)peerID
 {
     NSLog(@"Lost peer: %@", peerID);
-//    [browser invitePeer:peerID toSession:self.session withContext:nil timeout:30];
 }
 
 #pragma mark - MCSessionDelegate

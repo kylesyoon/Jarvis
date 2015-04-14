@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JARBaseViewController.h"
 
-@interface JARRemoteViewController : UIViewController
+@interface JARRemoteViewController : JARBaseViewController
 
 @end
 

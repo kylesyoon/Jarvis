@@ -10,7 +10,6 @@
 
 const struct MessagePayload MessagePayload = {
     .next = @"NEXT",
-    .strongNext = @"STRONGNEXT",
     .back = @"BACK",
     .present = @"PRESENT",
     .esc = @"ESC",
@@ -18,9 +17,6 @@ const struct MessagePayload MessagePayload = {
     .unmute = @"UNMUTE",
     .restart = @"RESTART",
 };
-
-const CGFloat ninetyDegrees = 90.0;
-const CGFloat thirtyDegrees = 30.0;
 
 @implementation JARConstants
 

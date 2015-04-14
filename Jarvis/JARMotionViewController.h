@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JARBaseViewController.h"
 
-@interface JARMotionViewController : UIViewController
+@interface JARMotionViewController : JARBaseViewController
 
 @end

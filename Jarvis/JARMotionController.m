@@ -8,16 +8,17 @@
 
 #import "JARMotionController.h"
 #import <CoreMotion/CoreMotion.h>
-#import "JARMultipeerController.h"
 #import "JARConstants.h"
 
-static CGFloat const SLKMotionUpdateInterval = 0.1;
+static const CGFloat JARMotionUpdateInterval = 0.1;
+static const CGFloat JARRollTriggerThreshold = 75.0;
+static const CGFloat JARRollTriggerError = 30;
+static const CGFloat JARMotionTriggerDelay = 0.5;
 
 @interface JARMotionController()
 
 @property (strong, nonatomic) CMMotionManager *motionManager;
 @property (strong, nonatomic) CMAttitude *previousAttitude;
-
 @property (nonatomic) BOOL didNext;
 @property (nonatomic) BOOL didBack;
 
@@ -46,7 +47,9 @@ static CGFloat const SLKMotionUpdateInterval = 0.1;
         }
         // Enabling muting by covering sensor.
         [UIDevice currentDevice].proximityMonitoringEnabled = YES;
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sensorStateChanged:) name:@"UIDeviceProximityStateDidChangeNotification" object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(sensorStateChanged:) name:@"UIDeviceProximityStateDidChangeNotification"
+                                                   object:nil];
     }
     
     return self;
@@ -71,7 +74,7 @@ static CGFloat const SLKMotionUpdateInterval = 0.1;
     NSOperationQueue *motionQueue = [[NSOperationQueue alloc] init];
     
     if (self.motionManager.deviceMotionAvailable && !self.motionManager.deviceMotionActive) {
-        self.motionManager.deviceMotionUpdateInterval = SLKMotionUpdateInterval;
+        self.motionManager.deviceMotionUpdateInterval = JARMotionUpdateInterval;
         NSLog(@"Starting device motion updates");
         [self.motionManager startDeviceMotionUpdatesToQueue:motionQueue
                                                 withHandler:^(CMDeviceMotion *motion, NSError *error) {
@@ -80,8 +83,14 @@ static CGFloat const SLKMotionUpdateInterval = 0.1;
                                                     }];
                                                 }];
     } else {
+        // TODO: Error handling.
         NSLog(@"ERROR: Device Motion not available!");
     }
+}
+
+- (void)stopGettingDeviceMotion
+{
+    [self.motionManager stopDeviceMotionUpdates];
 }
 
 - (void)analyzeDeviceMotion:(CMDeviceMotion *)motion
@@ -93,16 +102,21 @@ static CGFloat const SLKMotionUpdateInterval = 0.1;
         CGFloat pitch = [self getDegrees:self.previousAttitude.pitch];
         CGFloat yaw = [self getDegrees:self.previousAttitude.yaw];
         
-        if (roll > 90 && fabs(pitch) < 30 && fabs(yaw) < 30 && !self.didNext) {
-            self.didBack = YES;
-            self.didNext = NO;
-            [self.delegate detectedMotion:MessagePayload.back];
-            [self restartDeviceMotionUpdatesAfterDelay:0.75];
-        } else if (roll < -75 && fabs(pitch) < 30 && fabs(yaw) < 30 && !self.didBack) {
-            self.didBack = NO;
-            self.didNext = YES;
-            [self.delegate detectedMotion:MessagePayload.next];
-            [self restartDeviceMotionUpdatesAfterDelay:0.75];
+        if (fabs(pitch) < JARRollTriggerError && fabs(yaw) < JARRollTriggerError) {
+            if (roll > JARRollTriggerThreshold && !self.didNext) {
+                self.didBack = YES;
+                self.didNext = NO;
+                [self.delegate detectedMotion:MessagePayload.back];
+                [self restartDeviceMotionUpdatesAfterDelay:JARMotionTriggerDelay];
+            } else if (roll < -JARRollTriggerThreshold && !self.didBack) {
+                self.didBack = NO;
+                self.didNext = YES;
+                [self.delegate detectedMotion:MessagePayload.next];
+                [self restartDeviceMotionUpdatesAfterDelay:JARMotionTriggerDelay];
+            } else {
+                self.didBack = NO;
+                self.didNext = NO;
+            }
         } else {
             self.didBack = NO;
             self.didNext = NO;

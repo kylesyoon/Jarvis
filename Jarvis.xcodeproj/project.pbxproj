@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		51235C421ACAF4B400CD7AFF /* JARMotionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51235C411ACAF4B400CD7AFF /* JARMotionController.m */; };
 		51235C451ACB38A000CD7AFF /* JARMotionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51235C441ACB38A000CD7AFF /* JARMotionViewController.m */; };
+		512606941ADC4369004A4C31 /* JARBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 512606931ADC4369004A4C31 /* JARBaseViewController.m */; };
 		515D9AA31ABB5B1300A3126F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 515D9AA21ABB5B1300A3126F /* main.m */; };
 		515D9AA61ABB5B1300A3126F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 515D9AA51ABB5B1300A3126F /* AppDelegate.m */; };
 		515D9AAC1ABB5B1300A3126F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 515D9AAA1ABB5B1300A3126F /* Main.storyboard */; };
@@ -17,9 +18,9 @@
 		515D9ABD1ABB5B1300A3126F /* JarvisTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 515D9ABC1ABB5B1300A3126F /* JarvisTests.m */; };
 		515D9AD11ABC86DC00A3126F /* JARMultipeerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 515D9AD01ABC86DC00A3126F /* JARMultipeerController.m */; };
 		516EDB081ACC52240094ADEE /* JARConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 516EDB071ACC52240094ADEE /* JARConstants.m */; };
-		516EDB0B1ACC5AA70094ADEE /* SLKMotionCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 516EDB0A1ACC5AA70094ADEE /* SLKMotionCircleView.m */; };
 		516EDB131ACC67EF0094ADEE /* UIColor+Jarvis.m in Sources */ = {isa = PBXBuildFile; fileRef = 516EDB121ACC67EF0094ADEE /* UIColor+Jarvis.m */; };
-		51B35B1F1AD6BDF2007DFF48 /* JARMotionConditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B35B1E1AD6BDF2007DFF48 /* JARMotionConditions.m */; };
+		51BED5F41ADC142500A2008B /* JARConnectedGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 51BED5F31ADC142500A2008B /* JARConnectedGradientView.m */; };
+		51BED5F71ADC1B6000A2008B /* JARMotionGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 51BED5F61ADC1B6000A2008B /* JARMotionGradientView.m */; };
 		51EEBD0F1ACC6A6800F9B980 /* JARRemoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EEBD0E1ACC6A6800F9B980 /* JARRemoteViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,8 @@
 		51235C411ACAF4B400CD7AFF /* JARMotionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JARMotionController.m; sourceTree = "<group>"; };
 		51235C431ACB38A000CD7AFF /* JARMotionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JARMotionViewController.h; sourceTree = "<group>"; };
 		51235C441ACB38A000CD7AFF /* JARMotionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 5; lastKnownFileType = sourcecode.c.objc; path = JARMotionViewController.m; sourceTree = "<group>"; };
+		512606921ADC4369004A4C31 /* JARBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = JARBaseViewController.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
+		512606931ADC4369004A4C31 /* JARBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 5; lastKnownFileType = sourcecode.c.objc; path = JARBaseViewController.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		515D9A9D1ABB5B1300A3126F /* Jarvis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jarvis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		515D9AA11ABB5B1300A3126F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		515D9AA21ABB5B1300A3126F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -53,12 +56,12 @@
 		515D9AD01ABC86DC00A3126F /* JARMultipeerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JARMultipeerController.m; sourceTree = "<group>"; };
 		516EDB061ACC52240094ADEE /* JARConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JARConstants.h; sourceTree = "<group>"; };
 		516EDB071ACC52240094ADEE /* JARConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JARConstants.m; sourceTree = "<group>"; };
-		516EDB091ACC5AA70094ADEE /* SLKMotionCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKMotionCircleView.h; sourceTree = "<group>"; };
-		516EDB0A1ACC5AA70094ADEE /* SLKMotionCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKMotionCircleView.m; sourceTree = "<group>"; };
 		516EDB111ACC67EF0094ADEE /* UIColor+Jarvis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Jarvis.h"; sourceTree = "<group>"; };
 		516EDB121ACC67EF0094ADEE /* UIColor+Jarvis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Jarvis.m"; sourceTree = "<group>"; };
-		51B35B1D1AD6BDF2007DFF48 /* JARMotionConditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JARMotionConditions.h; sourceTree = "<group>"; };
-		51B35B1E1AD6BDF2007DFF48 /* JARMotionConditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JARMotionConditions.m; sourceTree = "<group>"; };
+		51BED5F21ADC142500A2008B /* JARConnectedGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JARConnectedGradientView.h; sourceTree = "<group>"; };
+		51BED5F31ADC142500A2008B /* JARConnectedGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JARConnectedGradientView.m; sourceTree = "<group>"; };
+		51BED5F51ADC1B6000A2008B /* JARMotionGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JARMotionGradientView.h; sourceTree = "<group>"; };
+		51BED5F61ADC1B6000A2008B /* JARMotionGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JARMotionGradientView.m; sourceTree = "<group>"; };
 		51EEBD0D1ACC6A6800F9B980 /* JARRemoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JARRemoteViewController.h; sourceTree = "<group>"; };
 		51EEBD0E1ACC6A6800F9B980 /* JARRemoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JARRemoteViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,7 +109,7 @@
 				515D9AA51ABB5B1300A3126F /* AppDelegate.m */,
 				516EDB0D1ACC5AC00094ADEE /* ViewControllers */,
 				516EDB0C1ACC5AB60094ADEE /* Views */,
-				51D8472F1AD84EEE003244E7 /* ModelControllers */,
+				51D8472F1AD84EEE003244E7 /* Controllers */,
 				51EEBD101ACC6AA000F9B980 /* Helpers */,
 				515D9AAA1ABB5B1300A3126F /* Main.storyboard */,
 				515D9AAD1ABB5B1300A3126F /* Images.xcassets */,
@@ -145,8 +148,10 @@
 		516EDB0C1ACC5AB60094ADEE /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				516EDB091ACC5AA70094ADEE /* SLKMotionCircleView.h */,
-				516EDB0A1ACC5AA70094ADEE /* SLKMotionCircleView.m */,
+				51BED5F21ADC142500A2008B /* JARConnectedGradientView.h */,
+				51BED5F31ADC142500A2008B /* JARConnectedGradientView.m */,
+				51BED5F51ADC1B6000A2008B /* JARMotionGradientView.h */,
+				51BED5F61ADC1B6000A2008B /* JARMotionGradientView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -154,6 +159,8 @@
 		516EDB0D1ACC5AC00094ADEE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				512606921ADC4369004A4C31 /* JARBaseViewController.h */,
+				512606931ADC4369004A4C31 /* JARBaseViewController.m */,
 				51235C431ACB38A000CD7AFF /* JARMotionViewController.h */,
 				51235C441ACB38A000CD7AFF /* JARMotionViewController.m */,
 				51EEBD0D1ACC6A6800F9B980 /* JARRemoteViewController.h */,
@@ -162,7 +169,7 @@
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
-		51D8472F1AD84EEE003244E7 /* ModelControllers */ = {
+		51D8472F1AD84EEE003244E7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				515D9ACF1ABC86DC00A3126F /* JARMultipeerController.h */,
@@ -170,7 +177,7 @@
 				51235C401ACAF4B400CD7AFF /* JARMotionController.h */,
 				51235C411ACAF4B400CD7AFF /* JARMotionController.m */,
 			);
-			name = ModelControllers;
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		51EEBD101ACC6AA000F9B980 /* Helpers */ = {
@@ -178,8 +185,6 @@
 			children = (
 				516EDB061ACC52240094ADEE /* JARConstants.h */,
 				516EDB071ACC52240094ADEE /* JARConstants.m */,
-				51B35B1D1AD6BDF2007DFF48 /* JARMotionConditions.h */,
-				51B35B1E1AD6BDF2007DFF48 /* JARMotionConditions.m */,
 				516EDB111ACC67EF0094ADEE /* UIColor+Jarvis.h */,
 				516EDB121ACC67EF0094ADEE /* UIColor+Jarvis.m */,
 			);
@@ -287,16 +292,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				516EDB0B1ACC5AA70094ADEE /* SLKMotionCircleView.m in Sources */,
+				51BED5F71ADC1B6000A2008B /* JARMotionGradientView.m in Sources */,
+				512606941ADC4369004A4C31 /* JARBaseViewController.m in Sources */,
 				516EDB131ACC67EF0094ADEE /* UIColor+Jarvis.m in Sources */,
 				516EDB081ACC52240094ADEE /* JARConstants.m in Sources */,
-				51B35B1F1AD6BDF2007DFF48 /* JARMotionConditions.m in Sources */,
 				51235C421ACAF4B400CD7AFF /* JARMotionController.m in Sources */,
 				51235C451ACB38A000CD7AFF /* JARMotionViewController.m in Sources */,
 				515D9AA61ABB5B1300A3126F /* AppDelegate.m in Sources */,
 				51EEBD0F1ACC6A6800F9B980 /* JARRemoteViewController.m in Sources */,
 				515D9AD11ABC86DC00A3126F /* JARMultipeerController.m in Sources */,
 				515D9AA31ABB5B1300A3126F /* main.m in Sources */,
+				51BED5F41ADC142500A2008B /* JARConnectedGradientView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +431,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Jarvis;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -437,6 +444,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Jarvis;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

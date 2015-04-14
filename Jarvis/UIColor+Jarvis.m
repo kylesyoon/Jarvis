@@ -10,14 +10,14 @@
 
 @implementation UIColor (Jarvis)
 
-+ (UIColor *)jarvis_primaryRed
++ (UIColor *)jarvis_lightBlue
 {
-    return [self colorFromHexString:@"FF4040"];
+    return [self colorFromHexString:@"BAE4E5"];
 }
 
-+ (UIColor *)jarvis_primaryBlue
++ (UIColor *)jarvis_gunMetal
 {
-    return [self colorFromHexString:@"00B4FF"];
+    return [self colorFromHexString:@"262826"];
 }
 
 #pragma mark - Helpers with HEX
